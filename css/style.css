@@ -1,0 +1,197 @@
+body{
+	background: #eeeeee;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+.ba-desk{
+	position: absolute;
+	background: #E1C9AF url("../img/wood-texture-012.jpg");
+	width: 85vmin;
+	height: 85vmin;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border: 15px solid transparent;
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+}
+	.ba-section{
+		border: 5px solid #14130F;
+		height: 100%;
+		padding: 8px;
+		margin: 0;
+}
+.ba-section-row1, .ba-section-row2{
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+.ba-section-row1{
+	border-top: 2px solid #14130F;
+	border-right: 2px solid #14130F;
+	border-left: 2px solid #14130F;
+}
+.ba-section-row2{
+	border-bottom: 2px solid rgba(19, 5, 1, 0.84);
+	border-right: 2px solid rgba(19, 5, 1, 0.84);
+	border-left: 2px solid rgba(19, 5, 1, 0.84);
+}
+
+.ba-row{
+	height: 25%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+[class*="ba-cell"]{
+	display: inline-block;
+	position: absolute;
+	width: 12.5%;
+	height: 25%;
+}
+.ba-cell2{
+	position: absolute;
+	left: 12.5%;
+}
+.ba-cell3{
+	position: absolute;
+	left: 25%;
+}
+.ba-cell4{
+	position: absolute;
+	left: 37.5%;
+}
+.ba-cell5{
+	position: absolute;
+	left: 50%;
+}
+.ba-cell6{
+	position: absolute;
+	left: 62.5%;
+}
+.ba-cell7{
+	position: absolute;
+	left: 75%;
+}
+.ba-cell8{
+	position: absolute;
+	left: 87.5%;
+}
+.ba-row:nth-child(odd) [class*="ba-cell"]:nth-child(even){
+	background: rgba(19, 5, 1, 0.84);
+}
+.ba-row:nth-child(even) [class*="ba-cell"]:nth-child(odd){
+	background: rgba(19, 5, 1, 0.84);
+}
+.ba-section-row1 .ba-row:nth-child(1) [class*="ba-cell"]:nth-child(even):after,
+.ba-section-row1 .ba-row:nth-child(2) [class*="ba-cell"]:nth-child(odd):after,
+.ba-section-row1 .ba-row:nth-child(3) [class*="ba-cell"]:nth-child(even):after{
+	position: relative;
+	display: block;
+	top: 10%;
+	left: 10%;
+	content: "";
+	width: 80%;
+	height: 80%;
+	background: #fff;
+	border: 4px double grey;
+	border-radius: 50%;
+
+}
+.ba-section-row2 .ba-row:nth-child(2) [class*="ba-cell"]:nth-child(odd):after,
+.ba-section-row2 .ba-row:nth-child(3) [class*="ba-cell"]:nth-child(even):after,
+.ba-section-row2 .ba-row:nth-child(4) [class*="ba-cell"]:nth-child(odd):after{
+	position: relative;
+	display: block;
+	top: 10%;
+	left: 10%;
+	content: "";
+	width: 80%;
+	height: 80%;
+	background: #000;
+	border: 4px double grey;
+	border-radius: 50%;
+}
+[class*="ba-cell"]:hover,
+.ba-row:nth-child(odd) [class*="ba-cell"]:nth-child(even):hover,
+.ba-row:nth-child(even) [class*="ba-cell"]:nth-child(odd):hover{
+	background: rgba(19, 5, 1, 0.52);
+}
+.ba-row > [class*="ba-cell"]:hover:after{
+	cursor: pointer;
+	box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+	-webkit-transform: scale(1.1,1.1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 250ms;
+	-moz-transform: scale(1.1,1.1);
+	-moz-transition-timing-function: ease-out;
+	-moz-transition-duration: 250ms;
+}
+.ba-row > [class*="ba-cell"]:active:hover:after{
+	animation: ba-drozhanie 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+}
+@keyframes ba-drozhanie{
+10%, 90% {
+	transform: translate3d(-1px, 0, 0);
+}
+20%, 80% {
+	transform: translate3d(2px, 0, 0);
+}
+30%, 50%, 70% {
+	transform: translate3d(-4px, 0, 0);
+}
+40%, 60% {
+	transform: translate3d(4px, 0, 0);
+}
+}
